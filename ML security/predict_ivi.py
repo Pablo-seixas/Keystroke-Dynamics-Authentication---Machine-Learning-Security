@@ -48,7 +48,7 @@ df_test = pd.DataFrame(keystroke_data)
 
 # Verificar se coletou dados suficientes
 if df_test.shape[0] < 5:
-    print("⚠️ Poucos dados coletados! Digite um texto maior.")
+    print(" Poucos dados coletados! Digite um texto maior.")
     exit()
 
 # Criar feature de tempo entre teclas
@@ -72,4 +72,4 @@ with open("prediction_results.txt", "w", encoding="utf-8") as f:
 
 # Mostrar no terminal também
 print(resultado)
-print("✅ Resultado salvo em 'prediction_results.txt'")
+print(" Resultado salvo em 'prediction_results.txt'")
