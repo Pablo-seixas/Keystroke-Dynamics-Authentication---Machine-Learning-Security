@@ -1,0 +1,83 @@
+Keystroke Dynamics Authentication - Machine Learning Security
+Este é um projeto de Machine Learning voltado para segurança da informação, utilizando dinâmica de digitação para autenticação de usuários. O modelo aprende a reconhecer um usuário com base nos tempos de pressionamento e transição entre teclas, podendo ser usado como um fator de segurança adicional em sistemas de autenticação.
+
+Funcionalidades
+Captura tempos de digitação do usuário (hold time e flight time).
+Treina um modelo de Machine Learning para autenticação.
+Testa se o modelo consegue identificar um usuário com base em uma nova digitação.
+Salva as previsões em um arquivo (prediction_results.txt).
+Estrutura do Projeto
+bash
+Copiar
+Editar
+📂 ML-security
+│── keystroke_data.csv        # Dados coletados da digitação
+│── keystroke_model.pkl       # Modelo treinado de Machine Learning
+│── README.md                 # Explicação do projeto
+│── security.py               # Script para coletar padrões de digitação
+│── ivi.py                    # Script para treinar o modelo de ML
+│── predict_ivi.py             # Script para prever usuário com base na digitação
+│── prediction_results.txt     # Resultado da última previsão do modelo
+Tecnologias Utilizadas
+Python 3.x
+Pandas
+NumPy
+Scikit-learn
+Joblib
+Pynput
+Como Executar o Projeto
+1. Instalar Dependências
+Antes de rodar o projeto, certifique-se de instalar as bibliotecas necessárias:
+
+bash
+Copiar
+Editar
+pip install pandas numpy scikit-learn joblib pynput
+2. Coletar Padrões de Digitação
+Execute o script de coleta de dados para capturar tempos de digitação:
+
+bash
+Copiar
+Editar
+python security.py
+Digite um texto e pressione ESC para finalizar. Isso gerará o arquivo keystroke_data.csv.
+
+3. Treinar o Modelo
+Após a coleta de dados, treine o modelo de Machine Learning:
+
+bash
+Copiar
+Editar
+python ivi.py
+O modelo será salvo no arquivo keystroke_model.pkl.
+
+4. Testar a Autenticação
+Agora, teste se o modelo consegue prever o usuário com base na digitação:
+
+bash
+Copiar
+Editar
+python predict_ivi.py
+Digite um pequeno texto e pressione ESC. O modelo fará a previsão e salvará o resultado em prediction_results.txt.
+
+Possíveis Melhorias
+Aumentar a base de dados com mais usuários reais.
+Testar diferentes modelos de Machine Learning, como redes neurais.
+Criar uma interface gráfica para facilitar a interação.
+Implementar uma API para autenticação online.
+Licença
+Este projeto é de código aberto e pode ser utilizado para fins acadêmicos e de pesquisa.
+
+
+
+
+
+
+
+
+
+
+
+
+
+O ChatGPT pode comet
