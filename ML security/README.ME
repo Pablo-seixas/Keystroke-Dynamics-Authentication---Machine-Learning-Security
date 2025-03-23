@@ -7,9 +7,7 @@ Treina um modelo de Machine Learning para autenticação.
 Testa se o modelo consegue identificar um usuário com base em uma nova digitação.
 Salva as previsões em um arquivo (prediction_results.txt).
 Estrutura do Projeto
-bash
-Copiar
-Editar
+
   ML-security
 │── keystroke_data.csv        # Dados coletados da digitação
 │── keystroke_model.pkl       # Modelo treinado de Machine Learning
@@ -29,34 +27,24 @@ Como Executar o Projeto
 1. Instalar Dependências
 Antes de rodar o projeto, certifique-se de instalar as bibliotecas necessárias:
 
-bash
-Copiar
-Editar
+
 pip install pandas numpy scikit-learn joblib pynput
 2. Coletar Padrões de Digitação
 Execute o script de coleta de dados para capturar tempos de digitação:
 
-bash
-Copiar
-Editar
+
 python security.py
 Digite um texto e pressione ESC para finalizar. Isso gerará o arquivo keystroke_data.csv.
 
 3. Treinar o Modelo
 Após a coleta de dados, treine o modelo de Machine Learning:
 
-bash
-Copiar
-Editar
 python ivi.py
 O modelo será salvo no arquivo keystroke_model.pkl.
 
 4. Testar a Autenticação
 Agora, teste se o modelo consegue prever o usuário com base na digitação:
 
-bash
-Copiar
-Editar
 python predict_ivi.py
 Digite um pequeno texto e pressione ESC. O modelo fará a previsão e salvará o resultado em prediction_results.txt.
 
